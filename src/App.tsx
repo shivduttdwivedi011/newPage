@@ -1,11 +1,9 @@
-// src/App.tsx
-
 import React from 'react';
-import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
+import { HashRouter as Router, Routes, Route } from 'react-router-dom'; // Use HashRouter
 import Layout from './components/Layout/Layout';
 import LoginPage from './pages/LoginPage';
 import DashboardPage from './pages/DashboardPage';
-import SignUpPage from './pages/SignUpPage'; // Import SignUpPage
+import SignUpPage from './pages/SignUpPage';
 
 const App: React.FC = () => {
   return (
@@ -13,7 +11,7 @@ const App: React.FC = () => {
       <Layout>
         <Routes>
           <Route path="/" element={<LoginPage />} />
-          <Route path="/signup" element={<SignUpPage />} /> {/* Add Sign Up route */}
+          <Route path="/signup" element={<SignUpPage />} />
           <Route path="/dashboard" element={<DashboardPage />} />
         </Routes>
       </Layout>
